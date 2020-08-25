@@ -7,11 +7,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.5.1",
     "@next/mdx": "^9.1.1",
     "next": "latest",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "remark-external-links": "^7.0.0",
+    "remark-images": "^2.0.0"
   },
   "devDependencies": {},
   "license": "ISC"
