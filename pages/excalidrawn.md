@@ -1,10 +1,10 @@
 # Excalidrawn
 
 ## PNG Drawing
-![Excalidrawn PNG](../public/images/excalidrawn.png)
+![Excalidrawn PNG](../images/excalidrawn.png)
 
 ## SVG Drawing
-![Excalidrawn SVG](../public/images/excalidrawn.svg)
+![Excalidrawn SVG](../images/excalidrawn.svg)
 
 Created using [Excalidraw](https://excalidraw.com/)
 
