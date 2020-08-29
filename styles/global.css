@@ -100,3 +100,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.footnotes {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+}
