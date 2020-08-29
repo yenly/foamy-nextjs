@@ -1,8 +1,6 @@
 # Foamy NextJS Starter
 
-This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](https://nextjs.org). 
-
-This starter combines Foam with NextJS. I built this from using [NextJS with MDX example repo](https://github.com/mdx-js/mdx). 
+This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](https://nextjs.org). I built this from using [NextJS with MDX example repo](https://github.com/mdx-js/mdx). 
 
 ## Getting Started
 
