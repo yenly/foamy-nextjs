@@ -24,7 +24,7 @@ All other markdown files and notes folder are examples and can be deleted. Befor
 I purposefully built this starter to be bare in styling and functionality to leave plenty of room to customize and build on top. 
 
 ### Basic Global styles
-I used Gridlover to generate a typography system with modular scale and vertical rhythm. [Choose your own scale](https://www.gridlover.net/try) and replace all styles in `/styles/global.css` between these comments 
+I used Gridlover to generate a typography system with modular scale and vertical rhythm. Add your preferred fonts and [choose your own scale](https://www.gridlover.net/try) and replace all styles in `/styles/global.css` between these comments 
 ```CSS
 /* begin gridlover perfect fourth scale */
 // ...
@@ -44,7 +44,7 @@ import '../styles/prism-theme-night-owl.css'
 NextJS uses CSS Modules by default. [Next JS Docs: Built-In CSS Support](https://nextjs.org/docs/basic-features/built-in-css-support) on how to configure for other methods.
 
 ### Siteconfig.js
-Open `siteconfig.js` and edit. This is used for populating site name in the Header component and in meta content.
+`siteconfig.js` is used for populating site name in the Header and Layout components.
 ```
 export default {
   "title": "Foamy NextJS",
@@ -79,6 +79,8 @@ const withMDX = require('@next/mdx')({
 - update VS Code extensions defined in `.vscode/extensions.json`
 - disable and enable extensions needed and restart VS Code
 
+### How to deploy
+I pick this stack for its easy [deploy to Vercel](https://nextjs.org/docs/deployment).
 
 ### Recommended Resources
 - [Foam Recipes](https://foambubble.github.io/foam/recipes)
