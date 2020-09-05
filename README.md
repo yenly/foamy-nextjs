@@ -6,7 +6,7 @@ This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](ht
 
 ```bash
 git clone https://github.com/yenly/foamy-nextjs
-cd foamy_nextjs
+cd foamy-nextjs
 npm install 
 # or
 yarn install
@@ -79,7 +79,7 @@ const withMDX = require('@next/mdx')({
 - disable and enable extensions needed and restart VS Code
 
 ### How to deploy
-I pick this stack for its easy [deploy to Vercel](https://nextjs.org/docs/deployment).
+I pick this stack for its easy [deploy to Vercel](https://nextjs.org/docs/deployment). To deploy under a sub-path on your domain, [use `basePath` option](https://nextjs.org/docs/api-reference/next.config.js/basepath).
 
 ### Recommended Resources
 - [Foam Recipes](https://foambubble.github.io/foam/recipes)
