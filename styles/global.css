@@ -80,7 +80,10 @@ sub {
 
 .contains-task-list {
   list-style-type: none;
-  padding-left: 0;
+}
+
+.task-list-item input {
+  margin-left: -20px;
 }
 
 pre {

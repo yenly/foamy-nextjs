@@ -1,11 +1,11 @@
 # Foamy NextJS Starter
 
-This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](https://nextjs.org). I built this using [NextJS with MDX example repo](https://github.com/mdx-js/mdx) as my base. 
+This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](https://nextjs.org). I built this using [NextJS with MDX example repo](https://github.com/mdx-js/mdx) as my base repo. 
 
 ## Getting Started
 
 ```bash
-git clone 
+git clone https://github.com/yenly/foamy-nextjs
 cd foamy_nextjs
 npm install 
 # or
@@ -16,15 +16,15 @@ npm run dev
 yarn dev
 ```
 
-Open index.md in `/pages`  VS Code and start adding your own content using Foam. Foam requires certain VS Codes extensions for it to work properly.
+Foam requires specific VS Code extensions for it to work properly. Open the repository as a folder using the File > Open... menu item. When prompted to install recommended extensions, click **Install all** (or **Show Recommendations** if you want to review and install them one by one).
 
-All other markdown files and notes folder are examples and can be deleted. Before doing so, I recommend clicking around to see how things work.
+Open `index.md` in `/pages` directory and edit to your heart's content. All other markdown files and notes folder are examples. Before doing so, I recommend clicking around to see how things work.
 
 ## How to customize
 I purposefully built this starter to be bare in styling and functionality to leave plenty of room to customize and build on top. 
 
 ### Basic Global styles
-I used Gridlover to generate a typography system with modular scale and vertical rhythm. Add your preferred fonts and [choose your own scale](https://www.gridlover.net/try) and replace all styles in `/styles/global.css` between these comments 
+I used Gridlover to generate a typography system with modular scale and vertical rhythm. Add your preferred fonts, [choose your own scale](https://www.gridlover.net/try), and replace all styles in `/styles/global.css` between these comments 
 ```CSS
 /* begin gridlover perfect fourth scale */
 // ...
@@ -32,20 +32,19 @@ I used Gridlover to generate a typography system with modular scale and vertical
 ```
 
 ### Syntax highlighting theme
-You can create own or convert your VS Code theme to use with this tool:
-[VS Code to Prism Themes](https://prism.dotenv.dev/)
-
-Add your CSS file in `/styles` folder and import it to `_app.js`
+Add your preferred prism theme CSS file in `/styles` folder and import it to `_app.js`
 ```javascript
 import '../styles/prism-theme-night-owl.css'
 ```
+You can convert your VS Code theme to use with this tool:
+[VS Code to Prism Themes](https://prism.dotenv.dev/)
 
 ### CSS Styling Methods
 NextJS uses CSS Modules by default. [Next JS Docs: Built-In CSS Support](https://nextjs.org/docs/basic-features/built-in-css-support) on how to configure for other methods.
 
 ### Siteconfig.js
 `siteconfig.js` is used for populating site name in the Header and Layout components.
-```
+```javascript
 export default {
   "title": "Foamy NextJS",
   "description": "Digital Garden built with Foam and NextJS with MDX",
@@ -74,8 +73,8 @@ const withMDX = require('@next/mdx')({
 })
 ```
 
-### How to update Foam
-[Fork the latest Foam template](https://github.com/foambubble/foam-template). Copy `.vscode` directory to your root level of this repo. Open your workspace and things should magically work. (It's a Foam feature.) If not, try:
+### How to upgrade Foam
+[Fork the latest Foam template](https://github.com/foambubble/foam-template). Copy `.vscode` directory to your root level of this repo. Open your workspace and things should magically work. It's Foam's magic sauce. If not, try:
 - update VS Code extensions defined in `.vscode/extensions.json`
 - disable and enable extensions needed and restart VS Code
 
