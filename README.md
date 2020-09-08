@@ -3,10 +3,11 @@
 This starter combines [Foam](https://foambubble.github.io/foam) with [NextJS](https://nextjs.org). I built this using [NextJS with MDX example repo](https://github.com/mdx-js/mdx) as my base repo. 
 
 ## Getting Started
-
+1. Click on **Use this template** button
+2. Clone the repository locally
+ 
 ```bash
-git clone https://github.com/yenly/foamy-nextjs
-cd foamy-nextjs
+cd your-local-repo-name
 npm install 
 # or
 yarn install
@@ -74,7 +75,7 @@ const withMDX = require('@next/mdx')({
 ```
 
 ### How to upgrade Foam
-[Fork the latest Foam template](https://github.com/foambubble/foam-template). Copy `.vscode` directory to your root level of this repo. Open your workspace and things should magically work. It's Foam's magic sauce. If not, try:
+[Fork the latest Foam template](https://github.com/foambubble/foam-template). Copy `.vscode` directory to your root level of your repo. Open your workspace and things should magically work. It's Foam's magic sauce. If not, try:
 - update VS Code extensions defined in `.vscode/extensions.json`
 - disable and enable extensions needed and restart VS Code
 
