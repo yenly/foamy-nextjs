@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import '../styles/prism-theme-night-owl.css'
 import Layout from '../components/Layout'
 import siteData from '../siteconfig'
 import { MDXProvider } from '@mdx-js/react'

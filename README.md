@@ -40,6 +40,8 @@ import '../styles/prism-theme-night-owl.css'
 You can convert your VS Code theme to use with this tool:
 [VS Code to Prism Themes](https://prism.dotenv.dev/)
 
+*Note:* This uses prism-react-renderer for syntax highlight. It's set to use styles from css so the theme is set to null in CodeBlock component. Refer to [prism-react-renderer FAQ](https://github.com/FormidableLabs/prism-react-renderer#faq) for other methods.
+
 ### CSS Styling Methods
 NextJS uses CSS Modules by default. [Next JS Docs: Built-In CSS Support](https://nextjs.org/docs/basic-features/built-in-css-support) on how to configure for other methods.
 
@@ -56,10 +58,9 @@ export default {
 ### Remark and Rehype plugins
 Add/remove plugins in `next.config.js`
 ```javascript
-const rehypePrism = require('@mapbox/rehype-prism')
 const remarkImages = require('remark-images')
 const remarkExternalLinks = require('remark-external-links')
-const remarkFootnotes = require('remark-footnotes')
+const remarkFootnote = require('remark-numbered-footnote-labels')
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -67,9 +68,8 @@ const withMDX = require('@next/mdx')({
     remarkPlugins: [
       remarkImages,
       remarkExternalLinks,
-      [remarkFootnotes, { inlineNotes: true }]
-    ],
-    rehypePlugins: [rehypePrism]
+      [remarkFootnotes]
+    ]
   },
 })
 ```
