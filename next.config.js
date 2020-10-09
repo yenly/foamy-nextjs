@@ -1,7 +1,6 @@
-const rehypePrism = require('@mapbox/rehype-prism')
 const remarkImages = require('remark-images')
 const remarkExternalLinks = require('remark-external-links')
-const remarkFootnotes = require('remark-footnotes')
+const remarkFootnote = require('remark-numbered-footnote-labels')
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -9,9 +8,8 @@ const withMDX = require('@next/mdx')({
     remarkPlugins: [
       remarkImages,
       remarkExternalLinks,
-      [remarkFootnotes, { inlineNotes: true }]
-    ],
-    rehypePlugins: [rehypePrism]
+      [remarkFootnote]
+    ]
   },
 })
 module.exports = withMDX({

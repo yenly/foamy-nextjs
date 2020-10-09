@@ -11,9 +11,9 @@ export default function Layout({ children, siteData }) {
         <title>{siteData.title}</title>
       </Head>
       <Header siteName={siteData.title} />
-      <section className="container">
-        <div className="content">{children}</div>
-      </section>
+      <main className="container">
+        {children}
+      </main>
     </>
   )
 }
