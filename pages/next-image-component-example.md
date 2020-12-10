@@ -14,10 +14,10 @@
 ## Custom JSX in MDX tag
 Example using `next/image` component via custom JSX in MDX tag `<Image />`
 
-<Image src="/images/excalidrawn.png" alt="Excalidrawn PNG" height="460" width="600" />
+<Image src="/images/excalidrawn.png" alt="Excalidrawn PNG" height="460" width="600" layout="responsive" />
 
 ```jsx
-<Image src="/images/excalidrawn.png" alt="Excalidrawn PNG" height="460" width="600" />
+<Image src="/images/excalidrawn.png" alt="Excalidrawn PNG" height="460" width="600" layout="responsive" />
 ```
 Following props are accepted and its defaults in `<Image />`
 ```js
@@ -29,7 +29,7 @@ let {
     layout = 'intrinsic' } = props
 ```
 
-**NOTE:** I decided not support `layout='fill'` option because it's overly complicated for use in markdown content. I recommend importing `next/image` component and work with it directly since it requires wrapping a div container and tinkering with its style. 
+**NOTE:** I decided not to support `layout='fill'` option because it's overly complicated for use in markdown content. I recommend importing `next/image` component and work with it directly since it requires wrapping a div container and tinkering with its style. 
 
 If you don't want your images to be aligned center, you can change CSS styling for `.nextImageWrapper` in global.css
 
