@@ -1,6 +1,7 @@
 const remarkImages = require('remark-images')
 const remarkExternalLinks = require('remark-external-links')
 const remarkFootnote = require('remark-numbered-footnote-labels')
+const remarkUnwrapImages = require('remark-unwrap-images')
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -8,7 +9,8 @@ const withMDX = require('@next/mdx')({
     remarkPlugins: [
       remarkImages,
       remarkExternalLinks,
-      [remarkFootnote]
+      remarkFootnote,
+      remarkUnwrapImages
     ]
   },
 })
