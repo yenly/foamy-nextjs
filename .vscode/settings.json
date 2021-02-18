@@ -17,6 +17,7 @@
   },
   "foam.openDailyNote.directory": "_posts",
   "foam.openDailyNote.fileExtension": "mdx",
+  "vscodeMarkdownNotes.defaultFileExtension": "mdx",
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
-  "vscodeMarkdownNotes.slugifyMethod": "github-slugger"
+  "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 }

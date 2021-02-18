@@ -1068,7 +1068,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.12.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.4.4", "@babel/runtime@^7.8.4":
   version "7.12.18"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz#af137bd7e7d9705a412b3caaf991fe6aaa97831b"
   integrity sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg==
@@ -3405,11 +3405,6 @@ lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.19:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
 
-longest-streak@^2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-2.0.4.tgz#b8599957da5b5dab64dee3fe316fa774597d90e4"
-  integrity sha512-vM6rUVCVUJJt33bnmHiZEvr7wPT78ztX7rojL+LW51bHtLh6HTjx84LA5W4+oa6aKEJA7jJu5LR6vQRBpA5DVg==
-
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -3496,31 +3491,6 @@ mdast-util-to-hast@10.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-mdast-util-to-markdown@^0.5.1:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown/-/mdast-util-to-markdown-0.5.4.tgz#be680ed0c0e11a07d07c7adff9551eec09c1b0f9"
-  integrity sha512-0jQTkbWYx0HdEA/h++7faebJWr5JyBoBeiRf0u3F4F3QtnyyGaWIsOwo749kRb1ttKrLLr+wRtOkfou9yB0p6A==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    longest-streak "^2.0.0"
-    mdast-util-to-string "^2.0.0"
-    parse-entities "^2.0.0"
-    repeat-string "^1.0.0"
-    zwitch "^1.0.0"
-
-mdast-util-to-string@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz#b8cfe6a713e1091cb5b728fc48885a4767f8b97b"
-  integrity sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==
-
-mdast-util-wiki-link@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-wiki-link/-/mdast-util-wiki-link-0.0.1.tgz#1f70e494d8af5fd527210f300683016be8307fd5"
-  integrity sha512-mQGhpvS1kICzDvC4me3vV4L/0msyGTvoHWIjqI0wUR1ToQ+CMy1o+tDVsS1G6QrXMMHOY0I8S9k6qwRfjxS6cA==
-  dependencies:
-    "@babel/runtime" "^7.12.1"
-    mdast-util-to-markdown "^0.5.1"
-
 mdurl@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
@@ -3542,13 +3512,6 @@ memory-fs@^0.5.0:
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
-
-micromark-extension-wiki-link@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/micromark-extension-wiki-link/-/micromark-extension-wiki-link-0.0.4.tgz#f4750a0f24051bf0521bbafaf64f291f9266d2a4"
-  integrity sha512-dJc8AfnoU8BHkN+7fWZvIS20SMsMS1ZlxQUn6We67MqeKbOiEDZV5eEvCpwqGBijbJbxX3Kxz879L4K9HIiOvw==
-  dependencies:
-    "@babel/runtime" "^7.12.1"
 
 micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
@@ -3863,7 +3826,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -4411,6 +4374,14 @@ remark-images@^2.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
+remark-inline-links@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/remark-inline-links/-/remark-inline-links-5.0.0.tgz#b0a43551167a181e840d33ee234c9652047f2276"
+  integrity sha512-lyo2XPBo5qxNojm49uBvBYZQMoASBhf35Gdv9VHLqBzl4Dylv4WjZYdyLWtsCgaQcKkrIG2vzEolcAIU9l1ifA==
+  dependencies:
+    mdast-util-definitions "^4.0.0"
+    unist-util-visit "^2.0.0"
+
 remark-mdx@1.6.22:
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-1.6.22.tgz#06a8dab07dcfdd57f3373af7f86bd0e992108bbd"
@@ -4467,14 +4438,13 @@ remark-unwrap-images@^2.0.0:
     hast-util-whitespace "^1.0.0"
     unist-util-visit "^2.0.0"
 
-remark-wiki-link@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/remark-wiki-link/-/remark-wiki-link-1.0.2.tgz#a02dc2bf7f94827a45440a659b08cbb15f4239de"
-  integrity sha512-lPCfPUXO9GrpZxJ6Y0y4DoMcqLyYm9Y5Mv4pUyZqVGJkiYxHJOWUNkNHhdF8GgWg6ILOcvemExUOUhQQpZ5Q0Q==
+remark-wiki-link@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/remark-wiki-link/-/remark-wiki-link-0.0.4.tgz#9af79538714280513f209661794083d5ae3006d7"
+  integrity sha512-Mmd5TspUWTnt+gafIdUtczHsjZY21XYEI9BeR6HMLKv/pUiNa5tDSWSjiPMvx07DlD4OmSM+tIhhk7SQXV3LrA==
   dependencies:
     "@babel/runtime" "^7.4.4"
-    mdast-util-wiki-link "0.0.1"
-    micromark-extension-wiki-link "0.0.4"
+    unist-util-map "^1.0.3"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -4484,7 +4454,7 @@ repeat-element@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.3.tgz#782e0d825c0c5a3bb39731f84efee6b742e6b1ce"
 
-repeat-string@^1.0.0, repeat-string@^1.5.4, repeat-string@^1.6.1:
+repeat-string@^1.5.4, repeat-string@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
 
@@ -5250,6 +5220,13 @@ unist-util-generated@^1.0.0:
 unist-util-is@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.2.tgz#c7d1341188aa9ce5b3cff538958de9895f14a5de"
+
+unist-util-map@^1.0.3:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/unist-util-map/-/unist-util-map-1.0.5.tgz#701069b72e1d1cc02db265502a5e82b77c2eb8b7"
+  integrity sha512-dFil/AN6vqhnQWNCZk0GF/G3+Q5YwsB+PqjnzvpO2wzdRtUJ1E8PN+XRE/PRr/G3FzKjRTJU0haqE0Ekl+O3Ag==
+  dependencies:
+    object-assign "^4.0.1"
 
 unist-util-position@^3.0.0:
   version "3.1.0"

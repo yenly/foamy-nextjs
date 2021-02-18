@@ -9,6 +9,7 @@ import remarkImages from 'remark-images'
 import remarkFootnote from 'remark-numbered-footnote-labels'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkWikiLink from 'remark-wiki-link'
+import remarkInlineLinks from 'remark-inline-links'
 import AnchorTag from '../components/AnchorTag'
 import CodeBlock from '../components/CodeBlock'
 import Image from '../components/Image'
@@ -44,11 +45,18 @@ export const getStaticProps = async ({ params }) => {
     components,
     mdxOptions: {
       remarkPlugins: [
-        remarkWikiLink,
         remarkImages,
         remarkExternalLinks,
         remarkFootnote,
+        remarkInlineLinks,
         remarkUnwrapImages,
+        [
+          remarkWikiLink,
+          {
+            hrefTemplate: (permalink) => `${permalink}`,
+            pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
+          },
+        ],
       ],
     },
     scope: data,
