@@ -21,7 +21,7 @@ const components = {
     code: CodeBlock,
     img: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
     Image: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
-    Button: dynamic(() => import('../components/Button')),
+    Button: dynamic(() => import('../components/button')),
 }
 
 export default function PostPage({ source, frontMatter }) {
