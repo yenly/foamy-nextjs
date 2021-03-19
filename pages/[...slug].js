@@ -1,77 +1,27 @@
-import fs from 'fs'
-import matter from 'gray-matter'
 import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
-import dynamic from 'next/dynamic'
-import path from 'path'
-import remarkExternalLinks from 'remark-external-links'
-import remarkImages from 'remark-images'
-import remarkFootnote from 'remark-numbered-footnote-labels'
-import remarkUnwrapImages from 'remark-unwrap-images'
-import remarkWikiLink from 'remark-wiki-link'
-import remarkInlineLinks from 'remark-inline-links'
-import AnchorTag from '../components/AnchorTag'
-import CodeBlock from '../components/CodeBlock'
-import Image from '../components/Image'
-import { postFilePaths, POSTS_PATH } from '../utils/mdxUtils'
+import MDXComponents from '../components/MDXComponents'
+import { getAllFiles, getFileBySlug, POSTS_PATH } from '../lib/mdx'
 
-// prettier-ignore
-const components = {
-    a: props => <AnchorTag {...props} />,
-    code: CodeBlock,
-    img: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
-    Image: (props) => <div className="nextImageWrapper"><Image  {...props} /></div>,
-    Button: dynamic(() => import('../components/button')),
-}
-
-export default function PostPage({ source, frontMatter }) {
-  const content = hydrate(source, { components })
+export default function PostPage({ mdxSource, frontMatter }) {
+  const content = hydrate(mdxSource, { components: MDXComponents })
   return content
 }
 
 export const getStaticProps = async ({ params }) => {
-  let postPath = 'index'
+  let slug = 'index'
 
   if (params && params.slug) {
-    postPath = Array.isArray(params.slug) ? params.slug.join('/') : params.slug
+    slug = Array.isArray(params.slug) ? params.slug.join('/') : params.slug
   }
 
-  const postFilePath = path.join(POSTS_PATH, `${postPath}.mdx`)
-  const source = fs.readFileSync(postFilePath)
+  const post = await getFileBySlug(slug)
 
-  const { content, data } = matter(source)
-
-  const mdxSource = await renderToString(content, {
-    components,
-    mdxOptions: {
-      remarkPlugins: [
-        remarkImages,
-        remarkExternalLinks,
-        remarkFootnote,
-        remarkInlineLinks,
-        remarkUnwrapImages,
-        [
-          remarkWikiLink,
-          {
-            hrefTemplate: (permalink) => `${permalink}`,
-            pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
-          },
-        ],
-      ],
-    },
-    scope: data,
-  })
-
-  return {
-    props: {
-      source: mdxSource,
-      frontMatter: data,
-    },
-  }
+  return { props: post }
 }
 
 export const getStaticPaths = async () => {
-  const paths = postFilePaths
+  const posts = await getAllFiles(POSTS_PATH)
+  const paths = posts
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
