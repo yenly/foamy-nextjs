@@ -17,10 +17,10 @@
     // [[wiki-links]], backlinking etc
     "kortina.vscode-markdown-notes",
 
-    // Adds `show graph` command that displays graph of linked notes
-    "tchayen.markdown-links",
+    // Image-pasting for markdown
+    "mushan.vscode-paste-image",
 
-    // Understated grayscale theme (light and dark variants)
-    "philipbe.theme-gray-matter"
+    // Spell checking for text, markdown and latex
+    "ban.spellright",
   ]
 }

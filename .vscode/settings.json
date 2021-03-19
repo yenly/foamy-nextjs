@@ -2,19 +2,29 @@
   "editor.minimap.enabled": false,
   "editor.wrappingIndent": "indent",
   "editor.overviewRulerBorder": false,
-  "editor.lineHeight": 24,
-  "workbench.colorTheme": "Gray Matter Light",
   "[markdown]": {
+    "editor.lineHeight": 24,
     "editor.quickSuggestions": true
   },
-  "git.enableSmartCommit": true,
-  "git.postCommitCommand": "sync",
+  "files.defaultLanguage": "markdown",
   "files.exclude": {
     "**/node_modules": true
   },
   "files.watcherExclude": {
     "**/node_modules": true
   },
+  "foam.edit.linkReferenceDefinitions": "withExtensions",
+  "foam.openDailyNote.directory": "_posts",
+  "foam.openDailyNote.fileExtension": "mdx",
+  "foam.openDailyNote.titleFormat": "fullDate",
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "markdown.preview.breaks": true,
+  "pasteImage.path": "${projectRoot}/public/images",
+  "pasteImage.showFilePathConfirmInputBox": true,
+  "spellright.notificationClass": "warning",
+  "vscodeMarkdownNotes.defaultFileExtension": "mdx",
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
-  "vscodeMarkdownNotes.slugifyMethod": "github-slugger"
+  "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+  "window.autoDetectColorScheme": true
 }
