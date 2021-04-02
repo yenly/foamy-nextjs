@@ -5,7 +5,7 @@ const AnchorTag = (props) => {
   if (target) {
     return <a {...props}>{children}</a>
   }
-  return <Link href={href}><a>{title || children}</a></Link>
+  return <Link href={`/${href}`}><a>{title || children}</a></Link>
 }
 
 export default AnchorTag
